@@ -1,0 +1,7 @@
+git status
+git config --list:查看用户名和邮箱
+git add -A:往暂存区添加文件和内容
+git commit -m "注释和说明":提交文件
+git remote add origin https://github.com/majun215/APUE.git:远端仓库
+git push origin master:提交到远端仓库，上传到服务器
+git remote -v:查看远端仓库的地址和远端仓库的对应关系
