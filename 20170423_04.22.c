@@ -2,7 +2,7 @@
 #include <dirent.h>
 #include <limits.h>
 #include <sys/stat.h> //定义S_IFDIR,S_IFBLK,S_IFCHR等
-#include "path_alloc_2.16.h"
+#include "path_alloc_02.16.h"
 
 typedef int Myfunc(const char *,const struct stat *,int);
 
