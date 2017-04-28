@@ -15,7 +15,7 @@ main(void)
 	}
 	else if(pid == 0)
 	{
-		if(execle("/bin/ls","ls","/home/dmtsai","/home/dmtsai/majun/github/apue",(char *)0,env_init) < 0)
+		if(execle("/bin/ls","ls","/home/dmtsai","/home/dmtsai/majun/apue",(char *)0,env_init) < 0)
 			err_sys("execle error");
 	}
 
