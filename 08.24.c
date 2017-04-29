@@ -1,4 +1,6 @@
 #include "apue.h"
+#include "08.05.h"
+#include "errors.h"
 
 int
 main(int argc, char *argv[])

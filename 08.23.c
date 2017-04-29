@@ -1,5 +1,7 @@
 #include "apue.h"
 #include <sys/wait.h>
+#include "08.05.h"
+#include "errors.h"
 
 int
 main(void)

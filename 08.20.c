@@ -13,7 +13,7 @@ main(void)
 	}
 	else if(pid == 0)
 	{
-		if(execl("/home/dmtsai/majun/github/apue/testinterp",(char *)0) < 0)
+		if(execl("/home/sar/bin/testinterp",(char *)0) < 0)
 			err_sys("execl error");
 	}
 	if(waitpid(pid,NULL,0) < 0)
