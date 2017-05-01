@@ -1,5 +1,6 @@
 #include "apue.h"
 #include <errno.h>
+#include "errors.h"
 
 static void
 sig_hup(int signo)

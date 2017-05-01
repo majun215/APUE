@@ -1,5 +1,7 @@
 #include "apue.h"
 #include <sys/acct.h>
+#include "errors.h"
+
 #if defined(BSD) /* different structure in FreeBSD */
 #define acct acctv2
 #define ac_flag ac_trailer.ac_flag
@@ -54,10 +56,10 @@ main(int argc, char *argv[])
 #if defined(HAS_AC_STAT)
 			(unsigned char) acdata.ac_stat,
 #endif
-			acdata.ac_flag & ACORE ? ’D’ : ’ ’,
-			acdata.ac_flag & AXSIG ? ’X’ : ’ ’,
-			acdata.ac_flag & AFORK ? ’F’ : ’ ’,
-			acdata.ac_flag & ASU ? ’S’ : ’ ’);
+			acdata.ac_flag & ACORE ? 'D' : ' ',
+			acdata.ac_flag & AXSIG ? 'X' : ' ',
+			acdata.ac_flag & AFORK ? 'F' : ' ',
+			acdata.ac_flag & ASU ? 'S' : ' ');
 	}
 	if (ferror(fp))
 		err_sys("read error");

@@ -1,5 +1,7 @@
 #include "apue.h"
 #include <sys/times.h>
+#include "errors.h"
+#include "08.05.h"
 
 static void pr_times(clock_t, struct tms *, struct tms *);
 static void do_cmd(char *);

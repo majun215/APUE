@@ -1,6 +1,7 @@
 #include "apue.h"
 #include <errno.h>
 #include <sys/time.h>
+#include "errors.h"
 
 #if defined(MACOS)
 #include <sys/syslimits.h>

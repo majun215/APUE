@@ -1,4 +1,6 @@
 #include "apue.h"
+#include "errors.h"
+
 int
 
 main(void)
