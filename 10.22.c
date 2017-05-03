@@ -1,4 +1,6 @@
 #include "apue.h"
+#include "errors.h"
+#include "10.14.h"
 
 static void sig_int(int);
 

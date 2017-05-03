@@ -1,4 +1,6 @@
 #include "apue.h"
+#include "errors.h"
+#include "10.08.h"
 
 unsigned int sleep2(unsigned int);
 static void sig_int(int);
