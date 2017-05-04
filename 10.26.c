@@ -1,4 +1,5 @@
 #include "apue.h"
+#include "errors.h"
 
 static void
 sig_int(int signo)

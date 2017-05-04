@@ -1,5 +1,6 @@
 #include "apue.h"
 #include <pthread.h>
+#include "errors.h"
 
 struct foo 
 {
