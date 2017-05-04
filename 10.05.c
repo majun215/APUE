@@ -1,5 +1,6 @@
 #include "apue.h"
 #include <pwd.h>
+#include "errors.h"
 
 static void
 my_alarm(int signo)

@@ -1,6 +1,8 @@
 #include "apue.h"
 #include <setjmp.h>
 #include <time.h>
+#include "errors.h"
+#include "10.14.h"
 
 static void sig_usr1(int);
 static void sig_alrm(int);
