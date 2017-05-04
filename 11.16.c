@@ -2,6 +2,7 @@
 #include <pthread.h>
 #include <limits.h>
 #include <sys/time.h>
+#include "errors.h"
 
 #define NTHR 8 /* number of threads */
 #define NUMNUM 8000000L /* number of numbers to sort */

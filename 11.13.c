@@ -1,4 +1,4 @@
-nclude "apue.h"
+#include "apue.h"
 #include <pthread.h>
 
 int
