@@ -1,5 +1,6 @@
 #include "apue.h"
 #include <pthread.h>
+#include "errors.h"
 
 pthread_t ntid;
 
@@ -33,4 +34,3 @@ main(void)
 	sleep(1);
 	exit(0);
 }
-Figure 11.2
