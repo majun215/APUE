@@ -2,6 +2,8 @@
 #include <pthread.h>
 #include <time.h>
 #include <sys/time.h>
+#include "errors.h"
+#include "12.04.h"
 
 extern int makethread(void *(*)(void *), void *);
 
