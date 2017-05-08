@@ -1,5 +1,6 @@
 #include "apue.h"
 #include <pthread.h>
+#include "errors.h"
 
 int quitflag; /* set nonzero by thread */
 sigset_t mask;
