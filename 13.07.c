@@ -1,6 +1,8 @@
 #include "apue.h"
 #include <pthread.h>
 #include <syslog.h>
+#include "13.06.h"
+#include "13.01.h"
 
 sigset_t mask;
 
@@ -48,7 +50,7 @@ main(int argc, char *argv[])
 	char *cmd;
 	struct sigaction sa;
 
-	if ((cmd = strrchr(argv[0], ’/’)) == NULL)
+	if ((cmd = strrchr(argv[0],'/')) == NULL)
 		cmd = argv[0];
 	else
 		cmd++;

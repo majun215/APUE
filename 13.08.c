@@ -1,6 +1,8 @@
 #include "apue.h"
 #include <syslog.h>
 #include <errno.h>
+#include "13.01.h"
+#include "13.06.h"
 
 extern int lockfile(int);
 extern int already_running(void);
@@ -30,7 +32,7 @@ main(int argc, char *argv[])
 {
 	char *cmd;
 	struct sigaction sa;
-	if ((cmd = strrchr(argv[0], ’/’)) == NULL)
+	if ((cmd = strrchr(argv[0], '/')) == NULL)
 		cmd = argv[0];
 	else
 		cmd++;

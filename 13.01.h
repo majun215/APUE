@@ -69,26 +69,3 @@ daemonize(const char *cmd)
 		exit(1);
 	}
 }
-
-int main(void)
-{
-	daemonize("ls /home/dmtsai/");
-	return 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
