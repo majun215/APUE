@@ -1,6 +1,9 @@
 #include "apue.h"
 #include <errno.h>
 #include <fcntl.h>
+#include "03.12.02.h"
+#include "03.12.01.h"
+#include "errors.h"
 
 char buf[500000];
 
