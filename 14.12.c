@@ -2,6 +2,10 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <sys/wait.h>
+#include "03.12.01.h"
+#include "10.24.h"
+#include "14.05.h"
+#include "errors.h"
 
 int
 main(int argc, char *argv[])
@@ -22,7 +26,7 @@ main(int argc, char *argv[])
 	/* turn on set-group-ID and turn off group-execute */
 	if (fstat(fd, &statbuf) < 0)
 		err_sys("fstat error");
-	if (fchmod(fd, (statbuf.st_mode & ˜S_IXGRP) | S_ISGID) < 0)
+	if (fchmod(fd, (statbuf.st_mode & ~S_IXGRP) | S_ISGID) < 0)
 		err_sys("fchmod error");
 	TELL_WAIT();
 	if ((pid = fork()) < 0) 

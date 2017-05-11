@@ -1,5 +1,8 @@
 #include "apue.h"
 #include <fcntl.h>
+#include "errors.h"
+#include "10.24.h"
+#include "14.05.h"
 
 static void
 lockabyte(const char *name, int fd, off_t offset)

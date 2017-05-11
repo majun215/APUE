@@ -38,13 +38,3 @@ already_running(void)
 	write(fd, buf, strlen(buf)+1);
 	return(0);
 }
-
-int lockfile(int fd)
-{  
-    struct flock fk;  
-    fk.l_type = F_WRLCK;  
-    fk.l_start = 0;  
-    fk.l_whence = SEEK_SET;  
-    fk.l_len = 0;  
-    return fcntl(fd,F_SETLK,&fk);  
-}  
