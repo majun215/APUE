@@ -1,6 +1,7 @@
 #include "apue.h"
 #include <fcntl.h>
 #include <sys/mman.h>
+#include "errors.h"
 
 #define COPYINCR (1024*1024*1024) /* 1 GB */
 
