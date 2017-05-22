@@ -1,4 +1,5 @@
 #include "apue.h"
+#include "errors.h"
 
 static int pfd1[2], pfd2[2];
 
@@ -22,7 +23,7 @@ WAIT_PARENT(void)
 	char c;
 	if (read(pfd1[0], &c, 1) != 1)
 		err_sys("read error");
-	if (c != ’p’)
+	if (c != 'p')
 		err_quit("WAIT_PARENT: incorrect data");
 }
 
@@ -39,6 +40,6 @@ WAIT_CHILD(void)
 	char c;
 	if (read(pfd2[0], &c, 1) != 1)
 		err_sys("read error");
-	if (c != ’c’)
+	if (c != 'c')
 		err_quit("WAIT_CHILD: incorrect data");
 }

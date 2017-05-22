@@ -1,5 +1,6 @@
 #include "apue.h"
 #include <sys/wait.h>
+#include "errors.h"
 
 #define DEF_PAGER "/bin/more" /* default pager program */
 
@@ -51,7 +52,7 @@ main(int argc, char *argv[])
 		/* get arguments for execl() */
 		if ((pager = getenv("PAGER")) == NULL)
 			pager = DEF_PAGER;
-		if ((argv0 = strrchr(pager, ’/’)) != NULL)
+		if ((argv0 = strrchr(pager, '/')) != NULL)
 			argv0++; /* step past rightmost slash */
 		else
 			argv0 = pager; /* no slash in pager */
