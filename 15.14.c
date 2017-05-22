@@ -1,5 +1,6 @@
 #include "apue.h"
 #include <ctype.h>
+#include "errors.h"
 
 int
 main(void)
@@ -11,7 +12,7 @@ main(void)
 			c = tolower(c);
 		if (putchar(c) == EOF)
 			err_sys("output error");
-		if (c == ’\n’)
+		if (c == '\n')
 			fflush(stdout);
 	}
 	exit(0);

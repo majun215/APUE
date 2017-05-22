@@ -21,7 +21,7 @@ popen(const char *cmdstring, const char *type)
 	pid_t pid;
 	FILE *fp;
 	/* only allow "r" or "w" */
-	if ((type[0] != ’r’ && type[0] != ’w’) || type[1] != 0) 
+	if ((type[0] != 'r' && type[0] != 'w') || type[1] != 0) 
 	{
 		errno = EINVAL;
 		return(NULL);
@@ -48,7 +48,7 @@ popen(const char *cmdstring, const char *type)
 	} 
 	else if (pid == 0) 
 	{ /* child */
-		if (*type == ’r’) 
+		if (*type == 'r') 
 		{
 			close(pfd[0]);
 			if (pfd[1] != STDOUT_FILENO) 
@@ -74,7 +74,7 @@ popen(const char *cmdstring, const char *type)
 		_exit(127);
 	}
 	/* parent continues... */
-	if (*type == ’r’) 
+	if (*type == 'r') 
 	{
 		close(pfd[1]);
 		if ((fp = fdopen(pfd[0], type)) == NULL)

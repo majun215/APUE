@@ -1,12 +1,13 @@
 #include "apue.h"
 #include <sys/wait.h>
+#include "errors.h"
 
 int
 main(void)
 {
 	char line[MAXLINE];
 	FILE *fpin;
-	if ((fpin = popen("myuclc", "r")) == NULL)
+	if ((fpin = popen("./myuclc", "r")) == NULL)
 		err_sys("popen error");
 	for ( ; ; ) 
 	{
@@ -19,6 +20,6 @@ main(void)
 	}
 	if (pclose(fpin) == -1)
 		err_sys("pclose error");
-	putchar(’\n’);
+	putchar('\n');
 	exit(0);
 }

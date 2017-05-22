@@ -1,4 +1,5 @@
 #include "apue.h"
+#include "errors.h"
 
 static void sig_pipe(int); /* our signal handler */
 
