@@ -1,6 +1,8 @@
 #include "apue.h"
 #include <fcntl.h>
 #include <sys/mman.h>
+#include "errors.h"
+#include "10.24.h"
 
 #define NLOOPS 1000
 #define SIZE sizeof(long) /* size of shared memory area */

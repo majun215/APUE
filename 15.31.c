@@ -1,5 +1,6 @@
 #include "apue.h"
 #include <sys/shm.h>
+#include "errors.h"
 
 #define ARRAY_SIZE 40000
 #define MALLOC_SIZE 100000
