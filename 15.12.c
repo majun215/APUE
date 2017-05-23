@@ -2,6 +2,7 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <sys/wait.h>
+#include "02.17.c"
 
 /*
  * * Pointer to array allocated at run-time.
