@@ -2,6 +2,8 @@
 #include <netdb.h>
 #include <errno.h>
 #include <sys/socket.h>
+#include "errors.h"
+#include "16.11.h"
 
 #define BUFLEN 128
 

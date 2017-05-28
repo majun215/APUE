@@ -1,4 +1,5 @@
 #include "apue.h"
+#include "errors.h"
 #if defined(SOLARIS)
 #include <netinet/in.h>
 #endif

@@ -2,6 +2,7 @@
 #include <netdb.h>
 #include <errno.h>
 #include <sys/socket.h>
+#include "errors.h"
 
 #define BUFLEN 128
 #define TIMEOUT 20
