@@ -1,5 +1,9 @@
 #include "open.h"
 #include <sys/uio.h> /* struct iovec */
+#include "errors.h"
+#include "17.14.h"
+#include "17.02.h"
+
 /*
  * * Open the file by sending the "name" and "oflag" to the
  * * connection server and reading a file descriptor back.

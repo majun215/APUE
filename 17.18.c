@@ -1,6 +1,8 @@
 #include "open.h"
 #include <fcntl.h>
 #define BUFFSIZE 8192
+#include "17.19.h"
+
 int
 main(int argc, char *argv[])
 {
@@ -10,7 +12,7 @@ main(int argc, char *argv[])
 	/* read filename to cat from stdin */
 	while (fgets(line, MAXLINE, stdin) != NULL) 
 	{
-		if (line[strlen(line) - 1] == ’\n’)
+		if (line[strlen(line) - 1] == '\n')
 			line[strlen(line) - 1] = 0; /* replace newline with null */
 		/* open the file */
 		if ((fd = csopen(line, O_RDONLY)) < 0)

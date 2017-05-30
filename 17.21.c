@@ -1,4 +1,7 @@
 #include "opend.h"
+#include "errors.h"
+#include "17.22.h"
+
 char errmsg[MAXLINE];
 int oflag;
 char *pathname;
