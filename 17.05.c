@@ -1,6 +1,7 @@
 #include "apue.h"
 #include <sys/socket.h>
 #include <sys/un.h>
+#include "errors.h"
 
 int
 main(void)

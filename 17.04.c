@@ -1,6 +1,7 @@
 #include "apue.h"
 #include <sys/msg.h>
 #define MAXMSZ 512
+#include "errors.h"
 
 struct mymesg 
 {

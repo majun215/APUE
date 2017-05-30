@@ -3,6 +3,7 @@
 #include <pthread.h>
 #include <sys/msg.h>
 #include <sys/socket.h>
+#include "errors.h"
 
 #define NQ 3 /* number of queues */
 #define MAXMSZ 512 /* maximum message size */
