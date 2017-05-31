@@ -1,5 +1,8 @@
-#include "opend.h"
 #include <syslog.h>
+#include "17.26.h"
+#include "17.29.h"
+#include "errors.h"
+
 int debug, oflag, client_size, log_to_stderr;
 char errmsg[MAXLINE];
 char *pathname;
@@ -14,10 +17,10 @@ main(int argc, char *argv[])
 	{
 		switch (c) 
 		{
-			case ’d’: /* debug */
+			case 'd': /* debug */
 				debug = log_to_stderr = 1;
 				break;
-			case ’?’:
+			case '?':
 				err_quit("unrecognized option: -%c", optopt);
 		}
 	}

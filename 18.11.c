@@ -1,5 +1,6 @@
 #include "apue.h"
 #include <termios.h>
+#include "errors.h"
 
 int
 main(void)
@@ -24,7 +25,7 @@ main(void)
 		default:
 			printf("unknown bits/byte\n");
 	}
-	term.c_cflag &= ˜CSIZE; /* zero out the bits */
+	term.c_cflag &= ~CSIZE; /* zero out the bits */
 	term.c_cflag |= CS8; /* set 8 bits/byte */
 	if (tcsetattr(STDIN_FILENO, TCSANOW, &term) < 0)
 		err_sys("tcsetattr error");
