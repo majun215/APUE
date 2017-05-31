@@ -1,5 +1,11 @@
 #include "opend.h"
 #include <fcntl.h>
+#include "apue.h"
+#include "17.12.h"
+#include "17.13.h"
+#include "17.23.h"
+#include "17.24.h"
+
 void
 handle_request(char *buf, int nread, int fd)
 {
