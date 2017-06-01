@@ -22,7 +22,7 @@ tty_cbreak(int fd) /* put terminal into a cbreak mode */
 	/*
 	 * * Echo off, canonical mode off.
 	 * */
-	buf.c_lflag &= ˜(ECHO | ICANON);
+	buf.c_lflag &= ~(ECHO | ICANON);
 	/*
 	 * * Case B: 1 byte at a time, no timer.
 	 * */
@@ -74,17 +74,17 @@ tty_raw(int fd) /* put terminal into a raw mode */
 	 * * Echo off, canonical mode off, extended input
 	 * * processing off, signal chars off.
 	 * */
-	buf.c_lflag &= ˜(ECHO | ICANON | IEXTEN | ISIG);
+	buf.c_lflag &= ~(ECHO | ICANON | IEXTEN | ISIG);
 	/*
 	 * * No SIGINT on BREAK, CR-to-NL off, input parity
 	 * * check off, don’t strip 8th bit on input, output
 	 * * flow control off.
 	 * */
-	buf.c_iflag &= ˜(BRKINT | ICRNL | INPCK | ISTRIP | IXON);
+	buf.c_iflag &= ~(BRKINT | ICRNL | INPCK | ISTRIP | IXON);
 	/*
 	 * * Clear size bits, parity checking off.
 	 * */
-	buf.c_cflag &= ˜(CSIZE | PARENB);
+	buf.c_cflag &= ~(CSIZE | PARENB);
 	/*
 	 * * Set 8 bits/char.
 	 * */
@@ -92,7 +92,7 @@ tty_raw(int fd) /* put terminal into a raw mode */
 	/*
 	 * Output processing off.
 	 * */
-	buf.c_oflag &= ˜(OPOST);
+	buf.c_oflag &= ~(OPOST);
 	/*
 	 * * Case B: 1 byte at a time, no timer.
 	 * */

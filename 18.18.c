@@ -1,4 +1,5 @@
 #include "apue.h"
+#include "errors.h"
 
 char *getpass(const char *);
 

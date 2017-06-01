@@ -1,4 +1,6 @@
 #include "apue.h"
+#include "errors.h"
+#include "18.20.h"
 
 static void
 sig_catch(int signo)
