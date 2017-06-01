@@ -23,7 +23,7 @@ ptym_open(char *pts_name, int pts_namesz)
 	 * * case where strlen(ptr) > pts_namesz.
 	 * */
 	strncpy(pts_name, ptr, pts_namesz);
-	pts_name[pts_namesz - 1] = ’\0’;
+	pts_name[pts_namesz - 1] = '\0';
 	return(fdm); /* return fd of master */
 errout:
 	err = errno;

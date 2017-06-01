@@ -1,5 +1,6 @@
 #include "apue.h"
 #include <termios.h>
+#include "19.09.h"
 
 pid_t
 pty_fork(int *ptrfdm, char *slave_name, int slave_namesz,
@@ -18,7 +19,7 @@ const struct winsize *slave_winsize)
 		 * * where strlen(pts_name) > slave_namesz.
 		 * */
 		strncpy(slave_name, pts_name, slave_namesz);
-		slave_name[slave_namesz - 1] = ’\0’;
+		slave_name[slave_namesz - 1] = '\0';
 	}
 	if ((pid = fork()) < 0) 
 	{

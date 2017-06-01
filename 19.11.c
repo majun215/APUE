@@ -1,5 +1,10 @@
 #include "apue.h"
 #include <termios.h>
+#include "errors.h"
+#include "19.10.h"
+#include "18.20.h"
+#include "19.12.h"
+#include "19.16.h"
 
 #ifdef LINUX
 #define OPTSTR "+d:einv"
@@ -32,22 +37,22 @@ main(int argc, char *argv[])
 	{
 		switch (c) 
 		{
-			case ’d’: /* driver for stdin/stdout */
+			case 'd': /* driver for stdin/stdout */
 				driver = optarg;
 				break;
-			case ’e’: /* noecho for slave pty’s line discipline */
+			case 'e': /* noecho for slave pty’s line discipline */
 				noecho = 1;
 				break;
-			case ’i’: /* ignore EOF on standard input */
+			case 'i': /* ignore EOF on standard input */
 				ignoreeof = 1;
 				break;
-			case ’n’: /* not interactive */
+			case 'n': /* not interactive */
 				interactive = 0;
 				break;
-			case ’v’: /* verbose */
+			case 'v': /* verbose */
 				verbose = 1;
 				break;
-			case ’?’:
+			case '?':
 				err_quit("unrecognized option: -%c", optopt);
 		}
 	}
@@ -102,11 +107,11 @@ set_noecho(int fd) /* turn off echo (for slave pty) */
 	struct termios stermios;
 	if (tcgetattr(fd, &stermios) < 0)
 		err_sys("tcgetattr error");
-	stermios.c_lflag &= ˜(ECHO | ECHOE | ECHOK | ECHONL);
+	stermios.c_lflag &= ~(ECHO | ECHOE | ECHOK | ECHONL);
 	/*
 	 * * Also turn off NL to CR/NL mapping on output.
 	 * */
-	stermios.c_oflag &= ˜(ONLCR);
+	stermios.c_oflag &= ~(ONLCR);
 	if (tcsetattr(fd, TCSANOW, &stermios) < 0)
 		err_sys("tcsetattr error");
 }

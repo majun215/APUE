@@ -1,5 +1,7 @@
 #include "apue.h"
 #define BUFFSIZE 512
+#include "14.24.h"
+#include "10.19.h"
 
 static void sig_term(int);
 static volatile sig_atomic_t sigcaught; /* set by signal handler */
