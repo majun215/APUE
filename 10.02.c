@@ -22,5 +22,5 @@ sig_usr(int signo) /* argument is signal number */
 	else if (signo == SIGUSR2)
 		printf("received SIGUSR2\n");
 	else
-	err_dump("received signal %d\n", signo);
+		err_dump("received signal %d\n", signo);
 }

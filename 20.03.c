@@ -1,6 +1,7 @@
 #include "apue.h"
 #include "apue_db.h"
 #include <fcntl.h>
+#include "errors.h"
 
 int
 main(void)
